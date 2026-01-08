@@ -22,22 +22,23 @@ This project demonstrates the practical differences between secure (HTTPS) and i
 * **Result:** Validated that the system explicitly denies connection attempts on non-standard web ports, reducing the attack surface. <br/>
 
 
+<img width="859" height="419" alt="block inbound rule" src="https://github.com/user-attachments/assets/e6c81510-a81f-47d3-b072-e4fc27150211" /> <br/>
 
 
 
-
-<br/>
 ### 2. Network Traffic Capture
 Used Wireshark to capture traffic during the following activities:
 * **HTTP Request:** Browsing to `http://info.cern.ch` (The world's first website).
 * **HTTPS Request:** Browsing to `www.google.com` (TLS 1.3).
-* **Connectivity Check:** ICMP Ping to `8.8.8.8`.
+* **Connectivity Check:** ICMP Ping to `8.8.8.8`. <br/> <br/> <br/>
+
+
+<img width="857" height="418" alt="network capture" src="https://github.com/user-attachments/assets/79fc0de2-ab03-47ae-8838-2299dc1d9fd7" /> <br/>
 
 
 
 
-
-
+<img width="859" height="419" alt="Google connection" src="https://github.com/user-attachments/assets/64fdb796-8188-4bb4-abc1-4f02f1802692" /> <br/>
 
 
 
