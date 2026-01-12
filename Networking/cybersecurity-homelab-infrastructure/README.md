@@ -39,13 +39,17 @@ After the initial build, I conducted a live troubleshooting session to resolve a
 (Metasploitable 2):**** Intentionally vulnerable target for exploit
 development.
 
-> ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\VMware%20Library.png)
+
+<img width="960" height="423" alt="VMware Library" src="https://github.com/user-attachments/assets/e9544291-dc9f-4a1e-9f23-6fd207086ad3" />
+
 
 ### Network Isolation Strategy
 
 To prevent malware from escaping into my physical home network, I utilized ****LAN Segments**** within VMware. This ensures that traffic between Kali and the Victim flows strictly through the pfSense virtual router, mimicking a real corporate DMZ/Intranet.
 
-> ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\pfSense%20dashboard.png)
+
+<img width="960" height="495" alt="pfSense dashboard" src="https://github.com/user-attachments/assets/83ecce39-a9bc-43fb-8830-71eebb32b402" />
+
 
 ---
 
@@ -80,11 +84,12 @@ Since the endpoints were configured correctly, I suspected the firewall was drop
 * ****Error:**** There were ****zero**** "Echo
   Replies" sent back. The traffic was hitting a wall.
 
-> ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\window%20firwall%20rule%20on.png)
-> 
-> ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\Packet%20capture%20fail.png)
-> 
-> ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\packet%20capture%20image.png)
+<img width="960" height="503" alt="window firwall rule on" src="https://github.com/user-attachments/assets/a446c803-47a6-4840-94ea-928bf9129be8" />
+
+<img width="952" height="418" alt="Packet capture fail" src="https://github.com/user-attachments/assets/d57f793b-6cd5-4db1-866a-1c9ea057f5bb" />
+
+<img width="960" height="465" alt="packet capture image" src="https://github.com/user-attachments/assets/7622af04-7bb7-4464-b63e-b409028b4710" />
+
 
 #### Phase 3: Root Cause Analysis & Resolution
 
@@ -97,9 +102,10 @@ request but refusing to answer.
   Rules > LAN**** and created a new rule to allow traffic from `LAN Net` to
   `Any`.
 
-> ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\kali%20firewall%20rule.png)
-> 
-> ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\Firewall%20rule%20for%20all%20connections.png) 
+<img width="960" height="505" alt="kali firewall rule" src="https://github.com/user-attachments/assets/2f126b1f-736c-46f1-b12d-915ccf860e7d" />
+
+<img width="960" height="466" alt="Firewall rule for all connections" src="https://github.com/user-attachments/assets/7daf19d2-2451-443d-9e00-02dfdde45a13" />
+
 
 ### Final Verification
 
@@ -107,11 +113,12 @@ After applying the rule, I re-ran the connectivity tests from the Kali terminal.
 
 * ****Result:**** Successful ICMP replies from the gateway. Network connectivity was fully restored.
 
-> ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\Windows%2010%20can%20now%20ping.png)
-> 
-> ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\Windows%20server%202022%20can%20now%20ping.png)
-> 
-> ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\Kali%20can%20ping.png)
+<img width="959" height="505" alt="Windows 10 can now ping" src="https://github.com/user-attachments/assets/db826e7a-003c-469a-878c-dffb32498346" />
+
+<img width="960" height="504" alt="Windows server 2022 can now ping" src="https://github.com/user-attachments/assets/1ded2d7c-642f-4fe9-97d0-8e1610ff8c21" />
+
+<img width="958" height="433" alt="Kali can ping" src="https://github.com/user-attachments/assets/0c805c63-80ac-41e9-8587-a8d5d8633cc9" />
+
 
 ---
 
