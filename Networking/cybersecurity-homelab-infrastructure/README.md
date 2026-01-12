@@ -39,17 +39,11 @@ After the initial build, I conducted a live troubleshooting session to resolve a
 (Metasploitable 2):**** Intentionally vulnerable target for exploit
 development.
 
-
-
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\VMware%20Library.png)
-
-
 
 ### Network Isolation Strategy
 
 To prevent malware from escaping into my physical home network, I utilized ****LAN Segments**** within VMware. This ensures that traffic between Kali and the Victim flows strictly through the pfSense virtual router, mimicking a real corporate DMZ/Intranet.
-
-
 
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\pfSense%20dashboard.png)
 
@@ -86,19 +80,11 @@ Since the endpoints were configured correctly, I suspected the firewall was drop
 * ****Error:**** There were ****zero**** "Echo
   Replies" sent back. The traffic was hitting a wall.
 
-
-
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\window%20firwall%20rule%20on.png)
-> 
-> 
 > 
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\Packet%20capture%20fail.png)
 > 
-> 
-> 
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\packet%20capture%20image.png)
-
-
 
 #### Phase 3: Root Cause Analysis & Resolution
 
@@ -111,17 +97,9 @@ request but refusing to answer.
   Rules > LAN**** and created a new rule to allow traffic from `LAN Net` to
   `Any`.
 
-
-
-
-
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\kali%20firewall%20rule.png)
 > 
-> 
-> 
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\Firewall%20rule%20for%20all%20connections.png) 
-
-
 
 ### Final Verification
 
@@ -131,11 +109,7 @@ After applying the rule, I re-ran the connectivity tests from the Kali terminal.
 
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\Windows%2010%20can%20now%20ping.png)
 > 
-> 
-> 
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\Windows%20server%202022%20can%20now%20ping.png)
-> 
-> 
 > 
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Networking\cybersecurity-homelab-infrastructure\screenshots\Kali%20can%20ping.png)
 
