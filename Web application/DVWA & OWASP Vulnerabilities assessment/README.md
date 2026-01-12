@@ -22,8 +22,6 @@ I initiated the assessment with an automated scan using **OWASP ZAP** against th
 * **Result:** ZAP identified multiple high-priority alerts, including SQL Injection, Cross-Site Scripting (Reflected), and Directory Traversal.
 * **Verification:** I used these alerts as a roadmap for manual exploitation.
 
-
-
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Web%20application\screenshots\alerts.png)
 
 ---
@@ -37,16 +35,10 @@ This was the most critical finding. The application failed to sanitize user inpu
 * **Payload Used:** `8.8.8.8; cat /etc/passwd`
 * **Observation:** The application executed the ping, followed immediately by the `cat` command.
 * **Impact:** I was able to retrieve the sensitive `/etc/passwd` file, revealing the list of all system users (e.g., `root`, `msfadmin`, `service` accounts). This confirms **Remote Code Execution (RCE)**.
-  
-  
 
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Web%20application\screenshots\Command%20ls%20execution.png)
 
-
-
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Web%20application\screenshots\Command%20passwd%20execution.png)
-
-
 
 #### B. Reflected Cross-Site Scripting (XSS)
 
@@ -58,11 +50,7 @@ I identified an input field that reflected user data back to the browser without
 
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Web%20application\screenshots\XSS%20Script.png)
 
-
-
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Web%20application\screenshots\XSS%20Popup.png)
-
-
 
 #### C. SQL Injection (SQLi)
 
@@ -72,11 +60,7 @@ The "User ID" lookup field was found to be vulnerable to SQL injection, allowing
 * **Test 2 (Bypass):** Inputting `' OR '1'='1' #` forced the database to return all records by making the query logically true.
 * **Impact:** Full database disclosure and potential authentication bypass.\
 
-
-
 > ![](C:\Users\hp\Documents\Projects\CyberSecurity\Cybersecurity-projects\Web%20application\screenshots\SQL%20injection.png)
-
-
 
 ## Remediation Recommendations
 
