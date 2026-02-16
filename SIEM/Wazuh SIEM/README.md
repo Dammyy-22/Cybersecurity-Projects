@@ -81,6 +81,8 @@ This wipes the corrupted OpenSearch security indices and forces a clean bootstra
 **Lesson learned:**
 If the indexer security backend corrupts on first boot, **resetting volumes is faster and safer than attempting repairs**.
 
+<img width="477" height="418" alt="ffffff" src="https://github.com/user-attachments/assets/15f5797f-1ad5-4958-8350-52ae9b584a2d" />
+
 ---
 
 ## 💻 Phase 2: Windows Agent Enrollment
@@ -107,6 +109,10 @@ Worse: the dashboard UI refused to delete it cleanly.
 Agents are stored server-side. Failed enrollments leave artifacts behind, especially when reusing hostnames or IPs.
 
 The only way out was direct CLI access.
+
+
+<img width="640" height="400" alt="iisssss" src="https://github.com/user-attachments/assets/be4405a2-1fc6-4e9c-ac24-da91d2e28f96" />
+
 
 ---
 
@@ -173,6 +179,9 @@ Two separate issues caused this:
 
 Wazuh’s XML parser is unforgiving. One misplaced tag or wrong encoding and the agent will not start.
 
+
+<img width="960" height="455" alt="Snipaste_2026-02-02_11-56-33" src="https://github.com/user-attachments/assets/8811f806-f775-403f-be96-c4423ff37d33" />
+
 ---
 
 ## ✅ Final Solution: PowerShell Automation (No Manual Editing)
@@ -210,6 +219,9 @@ This guarantees:
 * Correct UTF-8 encoding
 * Proper overwrite of a protected file
 
+
+<img width="1912" height="920" alt="Screenshot 2026-02-13 135219" src="https://github.com/user-attachments/assets/5eb45a6c-4eca-4de6-ad84-fdc67e1fec35" />
+
 ---
 
 ## 🔍 Phase 4: Verifying File Integrity Monitoring (FIM)
@@ -226,6 +238,9 @@ The Wazuh Dashboard under **Integrity Monitoring → Events** showed full contex
 * Action (created, modified, deleted)
 * Timestamp
 * Agent name
+
+<img width="1918" height="921" alt="Screenshot 2026-02-13 135338" src="https://github.com/user-attachments/assets/6f3c40bd-17b0-4d50-9806-531c3f744679" />
+
 
 ---
 
